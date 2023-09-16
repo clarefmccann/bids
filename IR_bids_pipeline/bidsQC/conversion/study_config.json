@@ -1,0 +1,134 @@
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SidecarFilename": "006*"
+
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-rest",
+            "criteria": {
+                "SidecarFilename": "008*"
+            },
+            "sidecarChanges": {
+                "TaskName": "rest"
+            }
+        },
+        {
+           "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-tgng_run-01",
+            "criteria": {
+                "SidecarFilename": "010*"
+            },
+            "sidecarChanges": {
+                "TaskName": "tgng"
+            }
+        },
+        {
+          "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-tgng_run-02",
+            "criteria": {
+                "SidecarFilename": "011*"
+            },
+            "sidecarChanges": {
+                "TaskName": "tgng"
+            }
+        },
+        {
+         "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-reapp_run-01",
+            "criteria": {
+                "SidecarFilename": "012*"
+            },
+            "sidecarChanges": {
+                "TaskName": "reapp"
+            }
+        },
+        {
+        "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-reapp_run-02",
+            "criteria": {
+                "SidecarFilename": "013*"
+            },
+            "sidecarChanges": {
+                "TaskName": "reapp"
+            }
+        },
+        {
+        "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-reapp_run-03",
+            "criteria": {
+                "SidecarFilename": "014*"
+            },
+            "sidecarChanges": {
+                "TaskName": "reapp"
+            }
+        },
+        {
+        "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-reapp_run-04",
+            "criteria": {
+                "SidecarFilename": "015*"
+            },
+            "sidecarChanges": {
+                "TaskName": "reapp"
+            }
+        },
+        {
+        "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-cond",
+            "criteria": {
+                "SidecarFilename": "020*"
+            }
+        },
+        {
+        "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-flanker",
+            "criteria": {
+                "SidecarFilename": "021*"
+            }
+        },
+        {
+        "dataType": "dwi",
+            "modalityLabel": "acq-b0ap",
+            "criteria": {
+                "SidecarFilename": "022*"
+                }
+        },
+        {
+        "dataType": "dwi",
+            "modalityLabel": "acq-98ap",
+            "criteria": {
+                "SidecarFilename": "023*"
+                }
+        },
+        {
+        "dataType": "dwi",
+            "modalityLabel": "acq-b0pa",
+            "criteria": {
+                "SidecarFilename": "024*"
+                }
+        },
+        {
+        "dataType": "dwi",
+            "modalityLabel": "acq-98pa",
+            "criteria": {
+                "SidecarFilename": "025*"
+            }
+
+        }
+    ]
+}

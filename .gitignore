@@ -1,0 +1,6 @@
+bids_data/
+log*/
+__pycache__/
+subject_list.txt
+test_subject_list.txt
+containers/
