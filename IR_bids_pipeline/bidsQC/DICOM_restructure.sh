@@ -2,7 +2,7 @@
 
 # Set subject list 
 
-declare -a SUBJLIST=("IRA058")
+declare -a SUBJLIST=("IRA053")
 
 for SUBJ in "${SUBJLIST[@]}"
 do

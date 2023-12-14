@@ -36,7 +36,7 @@ def batch_jobs(subject_list, path_dicoms, path_config, path_bidsdata):
                         subjectpath=subjectpath, wave=wave, subject=subject, path_config=path_config,
                         path_bidsdata=path_bidsdata)
                 else:
-                    batch_cmd = 'module load singularity; qsub -b y -M $USER@mail -l h_rt=1:00:00,h_data=1G -pe shared 2 -o {logdir}/{subjectdir}_output.txt -j y /u/local/apps/singularity/3.8.5/bin/singularity exec -B {path_dicoms} -B {path_bidsdata} -B {path_conversionfolder} {singularity_image} dcm2bids -d {subjectpath} -s {wave} -p {subject} -c {path_config} -o {path_bidsdata}  --forceDcm2niix --clobber'.format(
+                    batch_cmd = 'module load singularity; qsub -b y -M $USER@mail -l h_rt=3:00:00,h_data=8G -pe shared 2 -o {logdir}/{subjectdir}_output.txt -j y /u/local/apps/singularity/3.8.5/bin/singularity exec -B {path_dicoms} -B {path_bidsdata} -B {path_conversionfolder} {singularity_image} dcm2bids -d {subjectpath} -s {wave} -p {subject} -c {path_config} -o {path_bidsdata}  --forceDcm2niix --clobber'.format(
                         logdir=cfg.logdir, subjectdir=subjectdir, path_dicoms=cfg.path_dicoms,
                         wave=wave, path_conversionfolder=cfg.path_conversionfolder, path_config=cfg.path_config,
                         subject=subject, path_bidsdata=cfg.path_bidsdata, subjectpath=subjectpath,

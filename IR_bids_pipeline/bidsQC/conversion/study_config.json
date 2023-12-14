@@ -4,131 +4,145 @@
             "dataType": "anat",
             "modalityLabel": "T1w",
             "criteria": {
-                "SidecarFilename": "006*"
-
+                "SeriesDescription": "MPRAGE"
             }
         },
         {
             "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-rest",
+            "customLabels": "task-solo_run-01",
             "criteria": {
-                "SidecarFilename": "008*"
+                "SeriesDescription": "Solo1"
             },
             "sidecarChanges": {
-                "TaskName": "rest"
+                "TaskName": "solo"
             }
         },
         {
-           "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-tgng_run-01",
+            "customLabels": "task-solo_run-02",
             "criteria": {
-                "SidecarFilename": "010*"
+                "SeriesDescription": "Solo2"
             },
             "sidecarChanges": {
-                "TaskName": "tgng"
+                "TaskName": "solo"
             }
         },
         {
-          "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-tgng_run-02",
+            "customLabels": "task-solo_run-03",
             "criteria": {
-                "SidecarFilename": "011*"
+                "SeriesDescription": "Solo3"
             },
             "sidecarChanges": {
-                "TaskName": "tgng"
+                "TaskName": "solo"
             }
         },
         {
-         "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-reapp_run-01",
+            "customLabels": "task-help_run-01",
             "criteria": {
-                "SidecarFilename": "012*"
+                "SeriesDescription": "Help1"
             },
             "sidecarChanges": {
-                "TaskName": "reapp"
+                "TaskName": "help",
             }
         },
         {
-        "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-reapp_run-02",
+            "customLabels": "task-help_run-02",
             "criteria": {
-                "SidecarFilename": "013*"
+                "SeriesDescription": "Help2"
             },
             "sidecarChanges": {
-                "TaskName": "reapp"
+                "TaskName": "help"
             }
         },
         {
-        "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-reapp_run-03",
+            "customLabels": "task-help_run-03",
             "criteria": {
-                "SidecarFilename": "014*"
+                "SeriesDescription": "Help3"
             },
             "sidecarChanges": {
-                "TaskName": "reapp"
+                "TaskName": "help"
             }
         },
         {
-        "dataType": "func",
+            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-reapp_run-04",
+            "customLabels": "task-images",
             "criteria": {
-                "SidecarFilename": "015*"
+                "SeriesDescription": "Images"
             },
             "sidecarChanges": {
-                "TaskName": "reapp"
+                "TaskName": "images"
             }
         },
         {
-        "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-cond",
+            "dataType": "fmap",
+            "modalityLabel": "magnitude1",
+            "customLabels": "",
+            "IntendedFor": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
             "criteria": {
-                "SidecarFilename": "020*"
+                "SidecarFilename": "*e1.*",
+                "ProtocolName": "gre_fieldmap_2mmISO",
+		        "EchoTime": 0.00481
             }
-        },
-        {
-        "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-flanker",
-            "criteria": {
-                "SidecarFilename": "021*"
-            }
-        },
-        {
-        "dataType": "dwi",
-            "modalityLabel": "acq-b0ap",
-            "criteria": {
-                "SidecarFilename": "022*"
-                }
-        },
-        {
-        "dataType": "dwi",
-            "modalityLabel": "acq-98ap",
-            "criteria": {
-                "SidecarFilename": "023*"
-                }
-        },
-        {
-        "dataType": "dwi",
-            "modalityLabel": "acq-b0pa",
-            "criteria": {
-                "SidecarFilename": "024*"
-                }
-        },
-        {
-        "dataType": "dwi",
-            "modalityLabel": "acq-98pa",
-            "criteria": {
-                "SidecarFilename": "025*"
-            }
-
-        }
+	 },
+	 {
+	     "dataType": "fmap",
+	     "modalityLabel": "magnitude2",
+	     "customLabels": "",
+         "IntendedFor": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+         ],
+	     "criteria": {
+		      "SidecarFilename": "*e2.*",
+              "ProtocolName": "gre_fieldmap_2mmISO",
+		      "EchoTime": 0.00727
+	    }
+	 },
+	 {
+            "dataType": "fmap",
+            "modalityLabel": "phasediff",
+            "customLabels": "",
+            "IntendedFor": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+             ],
+             "criteria": {
+                "SidecarFilename": "*e2_ph.*"
+             },
+            "sidecarChanges": {
+                "EchoTime1": 0.00481,
+                "EchoTime2": 0.00727
+           }
+	}
     ]
 }
+
